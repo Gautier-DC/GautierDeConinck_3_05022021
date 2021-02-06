@@ -1,0 +1,27 @@
+{
+  "name": "gautierdeconinck_3_05022021",
+  "version": "1.0.0",
+  "description": "ohmyfood repo project 3",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "sass-loader": "^11.0.0",
+    "webpack": "^5.21.1",
+    "webpack-cli": "^4.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gautier-DC/GautierDeConinck_3_05022021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gautier-DC/GautierDeConinck_3_05022021/issues"
+  },
+  "homepage": "https://github.com/Gautier-DC/GautierDeConinck_3_05022021#readme"
+}

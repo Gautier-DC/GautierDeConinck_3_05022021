@@ -3,10 +3,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 
 module.exports = {
-    mode: "development",
+    mode: "production",
     entry: {
         home: ["/assets/scss/main.scss", "/assets/scss/home.scss"],
-        menus: ["/assets/scss/main.scss", "/assets/scss/menus.scss"],
+        menus: ["/assets/scss/main.scss", "/assets/scss/menu.scss"],
     },
     module: {
         rules: [
@@ -16,6 +16,7 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     // Translates CSS into CommonJS
                     "css-loader",
+                    "postcss-loader",
                     // Compiles Sass to CSS
                     "sass-loader",
                 ],

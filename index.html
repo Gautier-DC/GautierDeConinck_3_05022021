@@ -11,20 +11,14 @@
   <body>
     <!-- HEADER -->
     <header>
-      <a href="index.html"><img src="assets/img/logo/ohmyfood@2x.svg" alt="logo ohmyfood!" /></a>
+      <a href="index.html"><img src="./assets/img/logo/ohmyfood@2x.svg" alt="logo ohmyfood!" /></a>
     </header>
 
     <!-- SECTIONS PART -->
     <main>
-      <section id="geolocalisation">
-        <form action="#" method="POST">
-          <label for="localisation"><i class="fas fa-map-marker-alt"></i></label>
-          <select name="localisation" id="localisation">
-            <option value="" disabled selected>Choisissez une ville...</option>
-            <option value="paris" selected="selected">Paris, Belleville</option>
-          </select>
-        </form>
-      </section>
+      <div id="geolocalisation">
+        <p><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
+      </div>
 
       <section id="highlights">
         <h1>Réservez le menu qui vous convient</h1>
@@ -46,51 +40,63 @@
         <article>
           <a href="pages/la_palette_du_gout.html">
             <figure>
-              <img src="/assets/img/restaurants/1_small/jay-wennington-small-600w.png" alt="Restaurant la palette du goût" />
+              <img
+                src="./assets/img/restaurants/1_small/jay-wennington-small-600w.png"
+                alt="Table d'un restaurant chaleureux. Au centre, une salade composée avec saumon et vinaigre balsamic dans une assiette blanche."
+              />
               <span>Nouveau</span>
-              <figcaption>
-                <h3>La palette du goût</h3>
-                <p>Ménilmontant</p>
-                <i class="far fa-heart"></i>
-              </figcaption>
             </figure>
+            <div class="description">
+              <h3>La palette du goût</h3>
+              <p>Ménilmontant</p>
+              <i class="far fa-heart"></i>
+            </div>
           </a>
         </article>
         <article>
           <a href="pages/la_note_enchantee.html">
             <figure>
-              <img src="/assets/img/restaurants/1_small/stil-small-580w.png" alt="Restaurant la note enchantée" />
+              <img
+                src="./assets/img/restaurants/1_small/stil-small-580w.png"
+                alt="Plat d'un restaurant italien, boulette de pomme de terre sur lit de sauce tomates avec légumes et olives."
+              />
               <span>Nouveau</span>
-              <figcaption>
-                <h3>La note enchantée</h3>
-                <p>Charonne</p>
-                <i class="far fa-heart"></i>
-              </figcaption>
             </figure>
+            <div class="description">
+              <h3>La note enchantée</h3>
+              <p>Charonne</p>
+              <i class="far fa-heart"></i>
+            </div>
           </a>
         </article>
         <article>
           <a href="pages/a_la_francaise.html">
             <figure>
-              <img src="/assets/img/restaurants/1_small/toa-heftiba-small-600w.png" alt="Restaurant la palette du goût" />
-              <figcaption>
-                <h3>À la française</h3>
-                <p>Cité Rouge</p>
-                <i class="far fa-heart"></i>
-              </figcaption>
+              <img
+                src="./assets/img/restaurants/1_small/toa-heftiba-small-600w.png"
+                alt="Recette d'œuf bénédicte sur une tartine de pain avec salade dans une assiette plate blanche. "
+              />
             </figure>
+            <div class="description">
+              <h3>À la française</h3>
+              <p>Cité Rouge</p>
+              <i class="far fa-heart"></i>
+            </div>
           </a>
         </article>
         <article>
           <a href="pages/le_delice_des_sens.html">
             <figure>
-              <img src="/assets/img/restaurants/1_small/louis-hansel-shotsoflouis-small-600w.png" alt="Restaurant le délice des sens" />
-              <figcaption>
-                <h3>Le délice des sens</h3>
-                <p>Folie-Méricourt</p>
-                <i class="far fa-heart"></i>
-              </figcaption>
+              <img
+                src="/assets/img/restaurants/1_small/louis-hansel-shotsoflouis-small-600w.png"
+                alt="Table d'un restaurant asiatique. Plat de poisson accompagné de légumes et sauce disposé dans une assiette rectangulaire allongée "
+              />
             </figure>
+            <div class="description">
+              <h3>Le délice des sens</h3>
+              <p>Folie-Méricourt</p>
+              <i class="far fa-heart"></i>
+            </div>
           </a>
         </article>
       </section>

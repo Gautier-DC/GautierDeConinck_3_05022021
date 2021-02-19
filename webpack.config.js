@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 
 module.exports = {
-    mode: "production",
+    mode: "development",
     entry: {
         home: ["/assets/scss/main.scss", "/assets/scss/home.scss"],
         menus: ["/assets/scss/main.scss", "/assets/scss/menu.scss"],

@@ -1,0 +1,114 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./components/buttons";
+
+/* BODY */
+
+section {
+  padding: 2em 1em;
+}
+
+h2{
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+/* SECTION PART */
+
+#geolocalisation {
+  background-color: #eaeaea;
+  text-align: center;
+  color: #444444;
+  padding: 1em 0;
+  box-shadow: inset -2px 2px 6px rgba($color: #363636, $alpha: 0.2);
+  i {
+    margin-right: 1em;
+  }
+}
+
+/* HIGHLIGHTS */
+
+#highlights {
+  padding: 2.5em 1.5em 4em;
+  height: 285px;
+  background-color: $color-light-bg;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  p {
+    font-weight: 300;
+  }
+
+  a {
+    color: #fff;
+    font-weight: 500;
+  }
+}
+
+/* TUTORIAL */
+
+#tutorial{
+  justify-content: space-between;
+  ol{
+    counter-reset: steps;
+  }
+  li{
+    counter-increment: steps;
+    @include shadow;
+    font-weight: bold;
+    padding: 1em;
+    position: relative;
+    left: 0.8em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    border-radius: 1.5em;
+    background-color: $color-light-bg;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 0 0 75px;
+  }
+    i{
+      color: #7e7e7e;
+      margin: 0 1em;
+    }
+
+  li:before{
+    content: counter(steps);
+    position: absolute;
+    left: -0.8em;
+    background-color: #9356dc;
+    color: #fff;
+    text-align: center;
+    border-radius:50%;
+    width: 1.5em;
+    line-height: 1.5em;
+  }
+
+}
+
+
+/* RESTAURANTS */
+
+#restaurants{
+  background-color: $color-light-bg;
+  article {
+    border-radius: 1em;
+    @include shadow;
+    height: 250px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-basis: 250px;
+  }
+    a{
+      flex-basis: 100%;
+    }
+}

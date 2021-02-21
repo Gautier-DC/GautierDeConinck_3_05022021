@@ -1,0 +1,11 @@
+@import "/assets/scss/abstracts/variables";
+@import "/assets/scss/abstracts/mixins";
+
+.button {
+    border-radius: 3em;
+    background: linear-gradient(175deg,$color-secondary,$color-primary);
+    color: #fff;
+    padding: 1em 1.5em;
+    text-align: center;
+    @include shadow;    
+}

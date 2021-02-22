@@ -4,31 +4,30 @@
 
 /* BODY */
 
-section {
-  padding: 2em 1em;
-}
-
 h1 {
   font-family: 'Shrikhand', cursive;
   font-size: 1.5em;
-  margin-right: 3em;
   justify-content: space-between;
 }
 
 h2{
   text-transform: uppercase;
   font-weight: 300;
-  content: '';
-  border-bottom: 3px solid $color-tertiary;
-  transform: scaleX(0.2);
-  transform-origin: left 50%;
+  position: relative;
 }
+h2:after{
+  content: '';
+  width: 10%;
+  display: block;
+  top: 10px;
+  height: 3px;
+  background-color:  $color-tertiary;
+  }
 
 /* SECTION PART */
 .hero-image{
   height: 275px;
   width: 100%;
-  margin-bottom: -30px;
   position: relative;
   img{
     height: 100%;
@@ -39,8 +38,37 @@ h2{
 
 #menu{
   background-color: $color-light-bg;
-  border-radius: 2em 2em 0 0; 
+  border-radius: 2em 2em 0 0;
+  position: relative;
+  bottom: 30px;
+  padding: 2em 1em;
+  article{
+    @include shadow;
+    @include text-card;
+    height: 70px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    p{
+      line-height: 1.5em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-weight: 300;
+      strong{
+        color: #505050;
+      }
+    }
+    i{
+      display: none;
+    }
+  }
+  .button{
+    align-self: center;
+  }
 }
+
 
 /* HEADER */
 header>a:first-child{

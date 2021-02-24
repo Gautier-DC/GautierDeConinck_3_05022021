@@ -1,6 +1,4 @@
-@import "./abstracts/variables";
-@import "./abstracts/mixins";
-@import "./components/buttons";
+@import "./main.scss";
 
 /* BODY */
 
@@ -76,16 +74,16 @@ h2 {
     align-items: center;
     flex: 0 0 75px;
     &:hover{
-       background-color: rgba($color: $color-primary, $alpha: 0.2);    
+       background-color: rgba($color: $color-primary, $alpha: 0.2);
+       i{
+        color: $color-primary;      
+       }   
     }
   }
   i {
     color: #7e7e7e;
     margin: 0 1em;
-    font-size: 1.2em;
-    &:hover{
-      color: $color-primary;      
-    }
+    font-size: 1.2em;    
   }
 
   li:before {
@@ -151,21 +149,12 @@ h2 {
           margin-bottom: 0.3em;
         }
         i {
-          fill: transparent;
-          stroke-width: 1px;
-          stroke: #000;
           text-align: right;
-          font-size: 1.5rem;
-          flex-basis: 30%;
-          &:hover {
-            background: linear-gradient(30deg, $color-secondary, $color-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-          }
-          p {
-            font-weight: 300;
-            flex-basis: 70%;
-          }
+          flex-basis: 30%;          
+        }
+        p {
+          font-weight: 300;
+          flex-basis: 70%;
         }
       }
     }

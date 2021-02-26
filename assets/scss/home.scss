@@ -60,17 +60,12 @@ h2 {
   li {
     counter-increment: steps;
     @include shadow;
+    @include text-card;
     font-weight: bold;
-    padding: 1em;
     position: relative;
     left: 0.8em;
     margin-right: 1em;
-    margin-bottom: 1em;
-    border-radius: 1.5em;
     background-color: $color-light-bg;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
     flex: 0 0 75px;
     &:hover{

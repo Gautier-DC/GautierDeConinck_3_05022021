@@ -3,10 +3,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 
 module.exports = {
-    mode: "development",
-    entry: {
-        home: ["/assets/scss/main.scss", "/assets/scss/home.scss"],
-        menus: ["/assets/scss/main.scss", "/assets/scss/menu.scss"],
+   entry: {
+        home: ["/assets/scss/home.scss"],
+        menus: ["/assets/scss/menu.scss"],
     },
     module: {
         rules: [
@@ -32,4 +31,4 @@ module.exports = {
             filename: '[name].css',
         }),
     ],
-};
+   };

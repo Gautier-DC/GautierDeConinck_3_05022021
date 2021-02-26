@@ -1,0 +1,97 @@
+@import "./main.scss";
+
+/* BODY */
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+  justify-content: space-between;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  &:after {
+  content: "";
+  width: 10%;
+  margin: 0.5em 0 1em;
+  display: block;
+  top: 10px;
+  height: 3px;
+  background-color: $color-tertiary;
+  }
+}  
+
+/* SECTION PART */
+.hero-image {
+  height: 275px;
+  width: 100%;
+  position: relative;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+#menu {
+  background-color: $color-light-bg;
+  border-radius: 2em 2em 0 0;
+  position: relative;
+  margin-top: -55px;
+  padding: 2em 1em 3em;
+  justify-content: space-between;
+  section{
+    margin-bottom: 1.5em;
+    article {
+      @include shadow;
+      @include text-card;
+      background-color: #fff;
+      height: 70px;
+      line-height: 1.2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h3{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 80%;
+      }
+      div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        p:first-child {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-weight: 300;
+          flex-basis: 100%;
+        }
+        p:last-child {
+          color: #505050;
+          text-align: right;
+          flex-basis: 3em;
+        }
+      }    
+      
+      i {
+        display: none;
+      }
+    }  
+  }
+  .button {
+    align-self: center;
+  }
+}
+
+/* HEADER */
+header>a:first-child{
+  color: rgb(70, 70, 70);
+  margin-right: auto;
+ }
+ header>a:last-child{
+   margin-right: auto;
+ }

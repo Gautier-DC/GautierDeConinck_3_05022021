@@ -129,8 +129,8 @@ header>a:first-child{
 
  /* FOOTER */
  .container{
-  @include desktop{
-    max-width: 1024px;
+  @include tablet-landscape{
+    max-width: 1124px;
     margin-left: auto;
     margin-right: auto;
     }

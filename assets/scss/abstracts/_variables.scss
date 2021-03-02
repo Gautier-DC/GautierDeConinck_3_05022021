@@ -3,3 +3,10 @@ $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 $color-shadow: rgba(123, 125, 126, 0.4);
 $color-light-bg: #f6f6f6;
+
+
+$breakpoints: (
+    tablet:768px,
+    tablet-landscape:992px,
+    desktop:1200px
+);

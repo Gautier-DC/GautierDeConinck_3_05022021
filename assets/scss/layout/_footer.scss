@@ -1,19 +1,20 @@
 footer {
-  color: #fff;
   background-color: #353535;
-  padding: 2em 1em;
-  flex-direction: column;
-  img{
-      width: 7em;
-      margin-bottom: 1em;
-  }
-  ul {
-    list-style-type: none;
-    li {
-      line-height: 1.5em;
-      a i {
-        margin-right: 1em;
-        width: 1em;
+  .container{
+    color: #fff;
+    flex-direction: column;
+    img{
+        width: 7em;
+        margin-bottom: 1em;
+    }
+    ul {
+      list-style-type: none;
+      li {
+        line-height: 1.5em;
+        a i {
+          margin-right: 1em;
+          width: 1em;
+        }
       }
     }
   }

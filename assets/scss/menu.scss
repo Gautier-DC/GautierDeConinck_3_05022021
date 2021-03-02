@@ -29,13 +29,16 @@ h2 {
   width: 100%;
   position: relative;
   @include desktop{
-    height: 350px;
+    height: 450px;
   }
   img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: 50% 65%;
+    @include desktop{
+      object-position: 50% 70%;
+    }
   }
 }
 
@@ -72,6 +75,9 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     @include shadow;
+  }
+  @include desktop{
+    margin-top: -200px;
   }
   section{
     margin-bottom: 1.5em;

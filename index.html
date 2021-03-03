@@ -5,9 +5,9 @@
     <meta name="description" content="Un repas sur mesure sans file d'attente ? Ohmyfood !" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/399e6dfa69.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/home.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap" rel="stylesheet" />
     <title>Ohmyfood!</title>
   </head>
 
@@ -49,7 +49,12 @@
             <a href="./pages/la_palette_du_gout.html">
               <figure>
                 <img
-                  src="./assets/img/restaurants/1_small/jay-wennington-small-600w.png"
+                  src="./assets/img/restaurants/1_small/jay-wennington-small-600w.jpg"
+                  srcset="
+                    ../assets/img/restaurants/1_small/jay-wennington-small-600w.jpg     600w,
+                    ../assets/img/restaurants/2_medium/jay-wennington-medium-1300w.jpg 1300w
+                  "
+                  sizes="(min-width: 1200px) 49vw, 100vw"
                   alt="Table d'un restaurant chaleureux. Au centre, une salade composée avec saumon et vinaigre balsamic dans une assiette blanche."
                 />
                 <span>Nouveau</span>
@@ -65,7 +70,9 @@
             <a href="./pages/la_note_enchantee.html">
               <figure>
                 <img
-                  src="./assets/img/restaurants/1_small/stil-small-580w.png"
+                  src="./assets/img/restaurants/1_small/stil-small-580w.jpg"
+                  srcset="../assets/img/restaurants/1_small/stil-small-580w.jpg 580w, ../assets/img/restaurants/2_medium/stil-medium-1300w.jpg 1300w"
+                  sizes="(min-width: 1200px) 49vw, 100vw"
                   alt="Plat d'un restaurant italien, boulette de pomme de terre sur lit de sauce tomates avec légumes et olives."
                 />
                 <span>Nouveau</span>
@@ -76,13 +83,18 @@
                 <p>Charonne</p>
               </div>
             </a>
-          </article >
+          </article>
           <article class="d-flex column">
             <a href="./pages/a_la_francaise.html">
               <figure>
                 <img
-                  src="./assets/img/restaurants/1_small/toa-heftiba-small-600w.png"
-                  alt="Recette d'œuf bénédicte sur une tartine de pain avec salade dans une assiette plate blanche. "
+                  src="./assets/img/restaurants/1_small/toa-heftiba-small-600w.jpg"
+                  srcset="
+                    ../assets/img/restaurants/1_small/toa-heftiba-small-600w.jpg     600w,
+                    ../assets/img/restaurants/2_medium/toa-heftiba-medium-1300w.jpg 1300w
+                  "
+                  sizes="(min-width: 1200px) 49vw, 100vw"
+                  alt="Recette d'œuf bénédicte sur une tartine de pain avec salade dans une assiette plate blanche."
                 />
               </figure>
               <div>
@@ -96,7 +108,12 @@
             <a href="./pages/le_delice_des_sens.html">
               <figure>
                 <img
-                  src="./assets/img/restaurants/1_small/louis-hansel-shotsoflouis-small-600w.png"
+                  src="./assets/img/restaurants/1_small/louis-hansel-shotsoflouis-small-600w.jpg"
+                  srcset="
+                    ../assets/img/restaurants/1_small/louis-hansel-shotsoflouis-small-600w.jpg     600w,
+                    ../assets/img/restaurants/2_medium/louis-hansel-shotsoflouis-medium-1300w.jpg 1300w
+                  "
+                  sizes="(min-width: 1200px) 49vw, 100vw"
                   alt="Table d'un restaurant asiatique. Plat de poisson accompagné de légumes et sauce disposé dans une assiette rectangulaire allongée "
                 />
               </figure>
@@ -114,7 +131,7 @@
     <!-- FOOTER -->
     <footer>
       <div class="d-flex column container">
-        <a href="index.html"><img src="./assets/img/logo/ohmyfood@2x.svg" alt="logo ohmyfood!" class="filter-white"/></a>
+        <a href="index.html"><img src="./assets/img/logo/ohmyfood@2x.svg" alt="logo ohmyfood!" class="filter-white" /></a>
         <ul>
           <li>
             <a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a>

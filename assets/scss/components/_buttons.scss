@@ -4,6 +4,8 @@
 .button {
     font-weight: 500;
     border-radius: 3em;
+    position: relative;
+    z-index: 1;
     border: none;
     background: linear-gradient(175deg,$color-secondary,$color-primary);
     color: #fff;
@@ -13,6 +15,25 @@
     min-width: 11em;
     display: flex;
     justify-content: center;
+    &:hover{
+      &::after{
+        opacity: 1;
+      }
+    }
+    &::after{
+      border-radius: 3em;
+      content:'';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(175deg,lighten($color-secondary,5),lighten($color-primary,5));
+      box-shadow: 0 5px 7px darken($color-shadow,5);
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 250ms ease-in-out;
+  }
 }
 
 .heart{  

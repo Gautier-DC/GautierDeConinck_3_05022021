@@ -2,68 +2,99 @@
 @import "/assets/scss/abstracts/mixins";
 
 .button {
-    font-weight: 500;
-    border-radius: 3em;
-    position: relative;
-    z-index: 1;
-    border: none;
-    background: linear-gradient(175deg,$color-secondary,$color-primary);
-    color: #fff;
-    padding: 1em 1.5em;
-    text-align: center;
-    @include shadow;
-    min-width: 11em;
-    display: flex;
-    justify-content: center;
-    &:hover{
-      &::after{
-        opacity: 1;
-      }
+  font-weight: 500;
+  border-radius: 3em;
+  position: relative;
+  z-index: 1;
+  border: none;
+  background: linear-gradient(175deg, $color-secondary, $color-primary);
+  color: #fff;
+  padding: 1em 1.5em;
+  text-align: center;
+  @include shadow;
+  min-width: 11em;
+  display: flex;
+  justify-content: center;
+  &:hover {
+    &::after {
+      opacity: 1;
     }
-    &::after{
-      border-radius: 3em;
-      content:'';
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      background: linear-gradient(175deg,lighten($color-secondary,5),lighten($color-primary,5));
-      box-shadow: 0 5px 7px darken($color-shadow,5);
-      opacity: 0;
-      z-index: -1;
-      transition: opacity 250ms ease-in-out;
+  }
+  &::after {
+    border-radius: 3em;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(175deg, lighten($color-secondary, 5), lighten($color-primary, 5));
+    box-shadow: 0 5px 7px darken($color-shadow, 5);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms ease-in-out;
   }
 }
 
-.heart{  
-    font-size: 1.5rem;
-    position: relative;
-    .far.fa-heart{
-      position:relative;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-      opacity: 1;
-      &:hover{
-        .fas.fa-heart{
-          opacity: 1;
-        }
+.heart {
+  font-size: 1.5rem;
+  overflow: visible;
+  overflow-wrap: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .far.fa-heart {
+    overflow: visible;
+    position:relative;
+    z-index: 1;
+    cursor: pointer;
+    &:hover {
+      color: transparent;
+      .fas.fa-heart {
+        opacity: 1;
+        z-index: 2;
+        animation: heartbeat 600ms;
       }
     }
-    .fas.fa-heart{
-        position:absolute;
-        top: 0;
-        right: 15;
-        bottom: 0;
-        left: 0;
-        background: linear-gradient(30deg, $color-secondary, $color-primary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 80ms;
-      }
   }
+  .fas.fa-heart {
+    overflow: visible;
+    cursor: pointer;
+    background: linear-gradient(30deg, $color-secondary, $color-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position:absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    content: '';    
+  }
+}
+
+@keyframes heartbeat{
+  0%{
+    transform: scale(1);
+    opacity: 0;
+  }
+  20%{
+    transform: scale(0.5);
+  }
+  40%{
+    transform: scale(1.2);
+  }
+  50%,60%{
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  65%{
+    transform: scale(0.5);
+  }
+  95%{
+    transform: scale(1.4);
+  }
+  100%{
+    scale: 1;
+    opacity: 1;
+  }
+}

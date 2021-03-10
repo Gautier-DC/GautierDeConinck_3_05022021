@@ -1,8 +1,18 @@
 /* BODY */
+*,*::before,*::after {
+  box-sizing: border-box;
+}
 
+body {
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  background-color: #fff;
+}
 section {
   width: 100%;
 }
+
 .container {
   padding: 2em 1em;
   @include tablet {
@@ -13,4 +23,9 @@ section {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+#Gradient {
+  --color-stop-1: #ff79da;
+  --color-stop-2: #9356dc;
 }

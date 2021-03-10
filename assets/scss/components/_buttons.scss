@@ -37,64 +37,89 @@
 }
 
 .heart {
-  font-size: 1.5rem;
-  overflow: visible;
-  overflow-wrap: normal;
+  fill: transparent;
+  stroke: rgb(82, 82, 82);
+  stroke-width: 30;
+  cursor: pointer;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  .far.fa-heart {
+  svg {
     overflow: visible;
-    position:relative;
-    z-index: 1;
-    cursor: pointer;
-    &:hover {
-      color: transparent;
-      .fas.fa-heart {
-        opacity: 1;
-        z-index: 2;
-        animation: heartbeat 600ms;
-      }
-    }
+    width: 1.8rem;
   }
-  .fas.fa-heart {
-    overflow: visible;
-    cursor: pointer;
-    background: linear-gradient(30deg, $color-secondary, $color-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position:absolute;
-    top: 0;
+  path {
+    transform-origin: center;
+  }
+  &--main {
+    z-index: 1;
+  }
+  &--bg {
+    position: absolute;
     left: 0;
-    opacity: 0;
-    z-index: -1;
-    content: '';    
+    top: 0;
+    z-index: 0;
+    stroke: none;
+  }
+
+  &--main:hover path {
+    animation: heartbeat 0.5s linear forwards;
+  }
+
+  &--main:hover ~ .heart--bg path {
+    animation: heartfade 0.5s linear forwards;
   }
 }
 
-@keyframes heartbeat{
-  0%{
+@keyframes heartbeat {
+  0% {
     transform: scale(1);
+    stroke: url(#Gradient);
     opacity: 0;
   }
-  20%{
+  20% {
     transform: scale(0.5);
   }
-  40%{
+  40% {
     transform: scale(1.2);
   }
-  50%,60%{
+  50%,
+  60% {
     transform: scale(1);
-    opacity: 0.5;
+    fill: url(#Gradient);
+    opacity: 0.3;
   }
-  65%{
+  65% {
     transform: scale(0.5);
   }
-  95%{
+  95% {
     transform: scale(1.4);
   }
-  100%{
-    scale: 1;
+  100% {
+    stroke: url(#Gradient);
+    transform: scale(1);
+    fill: url(#Gradient);
     opacity: 1;
+  }
+}
+
+@keyframes heartfade {
+  70% {
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    fill: url(#Gradient);
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    fill: url(#Gradient);
+    transform: scale(2.5);
+    opacity: 0;
   }
 }

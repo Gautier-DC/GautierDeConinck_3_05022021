@@ -83,6 +83,7 @@ h2 {
   section {
     margin-bottom: 1.5em;
     article {
+      position: relative;
       @include shadow;
       @include text-card;
       background-color: #fff;
@@ -91,6 +92,13 @@ h2 {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      opacity: 0;
+      animation: appearance 1200ms ease-in-out forwards;
+      @for $i from 1 through 9 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * 200ms;
+        }
+      }
       h3 {
         overflow: hidden;
         text-overflow: ellipsis;

@@ -71,3 +71,16 @@
   border-radius: 50%;
 }
 
+@keyframes appearance {
+  0% {
+    transform: translateY(300px);
+    opacity: 0%;
+  }
+  60% {
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}

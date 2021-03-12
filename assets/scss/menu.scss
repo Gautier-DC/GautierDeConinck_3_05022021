@@ -88,10 +88,11 @@ h2 {
       @include text-card;
       background-color: #fff;
       height: 70px;
-      line-height: 1.2em;
+      overflow: hidden;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: space-between;
+      align-items: center;
       opacity: 0;
       animation: appearance 1200ms ease-in-out forwards;
       @for $i from 1 through 9 {
@@ -99,31 +100,76 @@ h2 {
           animation-delay: $i * 200ms;
         }
       }
-      h3 {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        width: 80%;
+      &:hover{
+        div{
+          flex-basis: calc(70% - 5rem);
+        }
+        .price{
+          transform: translateX(-5rem);
+        }
+        .fav{
+          transform: translateX(0rem);
+          i{
+            transform: rotate(0deg);
+          }
+        }
       }
       div {
+        height: 100%;
+        white-space: nowrap;
+        overflow: hidden;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        p:first-child {
+        flex-direction: column;
+        flex-basis: 70%;
+        transition: $fav-timing ease-in-out;
+        h3 {
+          line-height: 1.4em;
           overflow: hidden;
           text-overflow: ellipsis;
-          white-space: nowrap;
+          flex-basis: 100%;
+        }
+        p{
+          line-height: 1.4em;
+          overflow: hidden;
+          text-overflow: ellipsis;
           font-weight: 300;
           flex-basis: 100%;
         }
-        p:last-child {
-          color: #505050;
-          text-align: right;
-          flex-basis: 3em;
+      }
+      .price{
+        position: relative;
+        display: block;
+        transform: translateX(0rem);
+        transition: $fav-timing ease-in-out;
+        strong {
+        position: absolute;
+        top: 4px;
+        right: 10px;
+        color: #505050;
+        align-self: flex-end;
+        height: 100%;
+        flex-basis: 3em;
         }
       }
-      .fas.fa-check-circle {
-        display: none;
+      .fav {
+        position: absolute;
+        right: 0px;
+        height: 100%;
+        background-color: $color-tertiary;
+        border-radius: 0 $card-radius $card-radius 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        transform: translateX(5rem);
+        transition: $fav-timing ease-in-out;
+        i{
+          transform: rotate(-720deg);
+          color: #fff;
+          font-size: 1.5em;
+          transition: $fav-timing ease-in-out;
+        }
       }
     }
   }

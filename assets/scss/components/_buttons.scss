@@ -34,6 +34,9 @@
     z-index: -1;
     transition: opacity 250ms ease-in-out;
   }
+  &:visited {
+    color: #fff;
+  }
 }
 
 .heart {

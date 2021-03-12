@@ -8,6 +8,11 @@
   position: fixed;
   z-index: 99999;
   animation: visibility 2.5s forwards ease-in-out;
+  img{
+    position: absolute;
+    z-index: 1;
+    width: 9em;
+  }
 }
 
 @keyframes visibility {
@@ -83,4 +88,8 @@
     transform: translateY(0px);
     opacity: 100%;
   }
+}
+
+@keyframes slide-in {
+
 }

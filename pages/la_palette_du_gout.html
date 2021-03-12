@@ -30,11 +30,21 @@
           "
           sizes="100vw"
           alt="Table d'un restaurant chaleureux. Au centre, une salade composée avec saumon et vinaigre balsamic dans une assiette blanche."
-        >
+        />
       </div>
       <section id="menu" class="d-flex column">
         <h1 class="d-flex row">
-          La palette du goût<span class="heart"><i class="far fa-heart"></i><i class="fas fa-heart"></i></span>
+          La palette du goût<span class="heart"><svg class="heart--main" viewBox="0 0 512 512" title="heart">
+            <defs>
+              <linearGradient id="Gradient" x1="0" x2="0.4" y1="0.5" y2="1">
+                <stop offset="0%" stop-color= "var(--color-stop-1)"/>
+                <stop offset="100%" stop-color= "var(--color-stop-2)"/>
+            </defs>  
+            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+            </svg>
+            <svg class="heart--bg" viewBox="0 0 512 512" title="heart-bg">
+              <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+            </svg></span>
         </h1>
         <section id="starter">
           <h2>Entrées</h2>
@@ -44,7 +54,7 @@
               <p>Au piment d'Espelette</p>
               <p><strong>25€</strong></p>
             </div>
-            <i class="fas fa-check-circle"></i>
+            <div class="fav"><i class="fas fa-check-circle"></i></div>
           </article>
           <article>
             <h3>Foie gras de canard mi-cuit</h3>
@@ -117,7 +127,7 @@
             <i class="fas fa-check-circle"></i>
           </article>
         </section>
-        <button class="button"><a href="#">Commander</a></button>
+        <a href="#" class="button">Commander</a>
       </section>
     </main>
 

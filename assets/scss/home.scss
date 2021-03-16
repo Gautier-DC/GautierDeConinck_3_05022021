@@ -2,7 +2,7 @@
 
 h2 {
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: map-get($font-size, heading-menu);
   margin-bottom: 1em;
   flex-basis: 100%;
 }
@@ -33,7 +33,6 @@ h2 {
 
     h1 {
       font-weight: bold;
-      font-size: 1.5em;
     }
 
     p {
@@ -80,7 +79,7 @@ h2 {
       color: #7e7e7e;
       text-align: center;
       margin: 0 1em;
-      font-size: 1.2em;
+      font-size: map-get($font-size, i-size );
       flex-basis: 1.3em;
     }
     @include tablet-landscape{

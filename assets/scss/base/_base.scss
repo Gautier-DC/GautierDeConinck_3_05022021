@@ -4,9 +4,10 @@
 }
 
 body {
-  font-size: 1em;
+  font-size: map-get($font-size, body );
   font-family: "Roboto", sans-serif;
   color: #000;
+  min-width: 330px;
   background-color: #fff;
 }
 section {
